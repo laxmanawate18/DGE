@@ -1,0 +1,88 @@
+{
+  "LLamasoft": {
+    "DGE": {
+      "ConnectionStrings": {
+        "DataGuruEnterprise": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2MetaDatabaseConnectionString'] %>;Initial Catalog=DataGuruEnterprise;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "K2Application": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2MetaDatabaseConnectionString'] %>;Initial Catalog=K2Application;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "K2Data": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2MetaDatabaseConnectionString'] %>;Initial Catalog=K2Data;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "K2Documents": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2MetaDatabaseConnectionString'] %>;Initial Catalog=K2Documents;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "K2Logs": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2MetaDatabaseConnectionString'] %>;Initial Catalog=K2Logs;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "K2Users": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2MetaDatabaseConnectionString'] %>;Initial Catalog=K2Users;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "Models": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2DatabaseConnectionString'] %>;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "Workspaces": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['K2DatabaseConnectionString'] %>;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;",
+        "XModels": "Application Name=DGE;Data Source=<%= node['dgeconfmgmt']['XModelsConnectionString'] %>;Persist Security Info=True;User ID=<%= node['dgeconfmgmt']['K2DBUser'] %>;Password=<%= node['dgeconfmgmt']['K2DBPassword'] %>;"
+      },
+      "Crypto": {
+        "CertificatePath": "\\\\<%= node['dgeconfmgmt']['Fileshare'] %>\\Files\\DataGuru\\Crypto\\wildcard.supplychainsoft.com.pfx",
+        "CertificatePassword": "<%= node['dgeconfmgmt']['CertificatePassword'] %>"
+      },
+      "Hosts": {
+        "ConnectionManager": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9006",
+        "ConfigurationManager": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9002",
+        "FileListener": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9004",
+        "JobExecutionCoordinator": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9001",
+        "JobScheduler": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9000",
+        "NotificationManager": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9007",
+        "PackageManager": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9009",
+        "TaskExecutionCoordinator": "<%= node['dgeconfmgmt']['DGETecServerAddress'] %>:9003",
+        "WorkflowManager": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9005",
+        "WorkspaceManager": "<%= node['dgeconfmgmt']['DGEServerAddress'] %>:9008"
+      },
+      "Folders": {
+        "Execution": "\\\\<%= node['dgeconfmgmt']['Fileshare'] %>\\Files\\Temp\\DataGuru\\Exec",
+        "FileShare": "\\\\<%= node['dgeconfmgmt']['Fileshare'] %>\\Files",
+        "Logs": "C:\\DGE\\Logs",
+        "Packages": "\\\\<%= node['dgeconfmgmt']['Fileshare'] %>\\Files\\DataGuru\\Files",
+        "State": "C:\\DGE\\State"
+      },
+      "K2": {
+        <% if node['artifactory_environment'] == "LLCP-Production" %>
+        "ServiceClientHost": "https://<%= node['dgeconfmgmt']['ProdBaseAddress'] %>"
+        <% else %>
+        "ServiceClientHost": "https://<%= node['dgeconfmgmt']['BaseAddress'] %>"
+        <% end %>
+      },
+      "Platform": {
+        <% if node['artifactory_environment'] == "LLCP-Production" %>
+        "AlertsHost": "<%= node['dgeconfmgmt']['AlertsHost'] %>",
+        "AuthenticationHost": "https://<%= node['dgeconfmgmt']['ProdBaseAddress'] %>/api/authentication",
+        "AssetsHost": "<%= node['dgeconfmgmt']['AssetsHost'] %>",
+        "AssetsS3": {
+          "RegionName": "<%= node['dgeconfmgmt']['AssetsRegionName'] %>",
+          "BucketName": "<%= node['dgeconfmgmt']['AssetsBucketName'] %>",
+          "AccessKey": "<%= node['dgeconfmgmt']['AssetsAccessKey'] %>",
+          "SecretKey": "<%= node['dgeconfmgmt']['AssetsSecretKey'] %>"
+        },
+        "ClientId": "<%= node['dgeconfmgmt']['ProdClientId'] %>",
+        "ClientSecret": "<%= node['dgeconfmgmt']['ProdClientSecret'] %>",
+        "ConsulHost": "<%= node['dgeconfmgmt']['ConsulHost'] %>",
+        "ModelingHost": "https://<%= node['dgeconfmgmt']['ProdBaseAddress'] %>/api/modeling",
+        "QueueingHost": "https://<%= node['dgeconfmgmt']['ProdBaseAddress'] %>/api/queueing",
+        "StorageHost": "<%= node['dgeconfmgmt']['StorageHost'] %>"
+        <% else %>
+        "AlertsHost": "<%= node['dgeconfmgmt']['AlertsHost'] %>",
+        "AuthenticationHost": "https://<%= node['dgeconfmgmt']['BaseAddress'] %>/api/authentication",
+        "AssetsHost": "<%= node['dgeconfmgmt']['AssetsHost'] %>",
+        "AssetsS3": {
+          "RegionName": "<%= node['dgeconfmgmt']['AssetsRegionName'] %>",
+          "BucketName": "<%= node['dgeconfmgmt']['AssetsBucketName'] %>",
+          "AccessKey": "<%= node['dgeconfmgmt']['AssetsAccessKey'] %>",
+          "SecretKey": "<%= node['dgeconfmgmt']['AssetsSecretKey'] %>"
+        },
+        "ClientId": "<%= node['dgeconfmgmt']['ClientId'] %>",
+        "ClientSecret": "<%= node['dgeconfmgmt']['ClientSecret'] %>",
+        "ConsulHost": "<%= node['dgeconfmgmt']['ConsulHost'] %>",
+        "ModelingHost": "https://<%= node['dgeconfmgmt']['BaseAddress'] %>/api/modeling",
+        "QueueingHost": "https://<%= node['dgeconfmgmt']['BaseAddress'] %>/api/queueing",
+        "StorageHost": "<%= node['dgeconfmgmt']['StorageHost'] %>"
+        <% end %>
+      },
+      "S3": {
+        "RegionName": "<%= node['dgeconfmgmt']['RegionName'] %>",
+        "BucketName": "<%= node['dgeconfmgmt']['BucketName'] %>",
+        "AccessKey": "<%= node['dgeconfmgmt']['AccessKey'] %>",
+        "SecretKey": "<%= node['dgeconfmgmt']['SecretKey'] %>"
+		}
+    }
+  }
+}

@@ -1,0 +1,10 @@
+source 'http://supermarket.chef.io'
+
+metadata
+
+# Since we created the cookbook internally, we need to reference our internal chef server.
+#source :chef_server
+source 'http://10.232.8.38/organizations/packer'
+
+cookbook 'llama_install', :path => '../llama_install'
+cookbook 'artifactory-artifact', '../artifactory_artifact'
