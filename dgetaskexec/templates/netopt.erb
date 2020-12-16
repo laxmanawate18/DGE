@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="NetOptModelProcessorDEM.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Data.SQLite" publicKeyToken="db937bc2d44ff139" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-1.0.104.0" newVersion="1.0.104.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="LLamasoft.K2.Hydrator.Services" publicKeyToken="83d15299e11c83bd" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-8.4.5.5" newVersion="8.4.5.5" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <applicationSettings>
+    <NetOptModelProcessorDEM.Properties.Settings>
+      <setting name="BaseConnectionManagerAddress" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['BaseConnectionManagerAddress'] %></value>
+      </setting>
+      <setting name="PollingIntervalMs" serializeAs="String">
+        <value>10000</value>
+      </setting>
+      <setting name="BaseConfigurationManagerAddress" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['BaseConfigurationManagerAddress'] %></value>
+      </setting>
+      <setting name="ConfigurationScope" serializeAs="String">
+        <value>NetOptModelProcessorDEM</value>
+      </setting>
+      <setting name="K2UsersDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['K2UsersDatabaseConnectionString'] %></value>
+      </setting>
+      <setting name="K2JobsDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['K2JobsDatabaseConnectionString'] %></value>
+      </setting>
+      <setting name="K2ServiceUsername" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['K2ServiceUsername'] %></value>
+      </setting>
+      <setting name="K2ServicePassword" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['K2ServicePassword'] %></value>
+      </setting>
+      <setting name="K2ServiceUrl" serializeAs="String">
+        <value><%= node['dgetaskexec']['config']['K2ServiceUrl'] %></value>
+      </setting>
+    </NetOptModelProcessorDEM.Properties.Settings>
+  </applicationSettings>
+</configuration>

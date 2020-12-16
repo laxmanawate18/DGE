@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="LLamasoft.DGE.ETL.Server.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <applicationSettings>
+    <LLamasoft.DGE.ETL.Server.Properties.Settings>
+      <setting name="BaseServerAddress" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['BaseServerAddress'] %></value>
+      </setting>
+      <setting name="LogFilePath" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['LogFilePath'] %></value>
+      </setting>
+      <setting name="PersistedStateFilePath" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['PersistedStateFilePath'] %></value>
+      </setting>
+      <setting name="LogConnectionString" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['LogConnectionString'] %></value>
+      </setting>
+      <setting name="LogTableName" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['LogTableName'] %></value>
+      </setting>
+      <setting name="BaseConfigurationManagerAddress" serializeAs="String">
+        <value></value>
+      </setting>
+      <setting name="ConfigurationScope" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['ConfigurationScope'] %></value>
+      </setting>
+      <setting name="WorkspaceServerInstance" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspaceServerInstance'] %></value>
+      </setting>
+      <setting name="WorkspaceUserID" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspaceUserID'] %></value>
+      </setting>
+      <setting name="WorkspacePassword" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspacePassword'] %></value>
+      </setting>
+      <setting name="WorkspaceNamePrefix" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspaceNamePrefix'] %></value>
+      </setting>
+      <setting name="WorkspaceNameSuffix" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspaceNameSuffix'] %></value>
+      </setting>
+      <setting name="WorkspacePoolSize" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspacePoolSize'] %></value>
+      </setting>
+      <setting name="DatabaseManagementConnectionString" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseManagementConnectionString'] %></value>
+      </setting>
+      <setting name="DatabaseFolderPath" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseFolderPath'] %></value>
+      </setting>
+      <setting name="DatabaseInitialSize" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseInitialSize'] %></value>
+      </setting>
+      <setting name="DatabaseGrowthFactor" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseGrowthFactor'] %></value>
+      </setting>
+      <setting name="DatabaseMaximumSize" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseMaximumSize'] %></value>
+      </setting>
+      <setting name="DatabaseLogFolderPath" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseLogFolderPath'] %></value>
+      </setting>
+      <setting name="DatabaseLogInitialSize" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseLogInitialSize'] %></value>
+      </setting>
+      <setting name="DatabaseLogGrowthFactor" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseLogGrowthFactor'] %></value>
+      </setting>
+      <setting name="DatabaseLogMaximumSize" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['DatabaseLogMaximumSize'] %></value>
+      </setting>
+      <setting name="MinimumReviewIntervalSeconds" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['MinimumReviewIntervalSeconds'] %></value>
+      </setting>
+      <setting name="RetainUsedDatabases" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['RetainUsedDatabases'] %></value>
+      </setting>
+      <setting name="WorkspaceLifetimeSeconds" serializeAs="String">
+        <value><%= node['dgewsmngr']['config']['WorkspaceLifetimeSeconds'] %></value>
+      </setting>
+    </LLamasoft.DGE.ETL.Server.Properties.Settings>
+  </applicationSettings>
+</configuration>

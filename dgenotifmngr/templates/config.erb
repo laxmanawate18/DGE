@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="LLamasoft.DGE.ETL.Server.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <appSettings>
+    <add key="Job" value="/DataGuru/Jobs/Details/{0}#job-details" />
+    <add key="Dashboard" value="/Models/ResetCache/{0}?redirectUrl=/Models/Details/{0}#dashboard" />
+  </appSettings>
+  <applicationSettings>
+    <LLamasoft.DGE.ETL.Server.Properties.Settings>
+      <setting name="BaseServerAddress" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['BaseServerAddress'] %></value>
+      </setting>
+      <setting name="LogFilePath" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['LogFilePath'] %></value>
+      </setting>
+      <setting name="PersistedStateFilePath" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['PersistedStateFilePath'] %></value>
+      </setting>
+      <setting name="LogConnectionString" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['LogConnectionString'] %></value>
+      </setting>
+      <setting name="LogTableName" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['LogTableName'] %></value>
+      </setting>
+      <setting name="DgeDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['DgeDatabaseConnectionString'] %></value>
+      </setting>
+      <setting name="K2ApplicationDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['K2ApplicationDatabaseConnectionString'] %></value>
+      </setting>
+      <setting name="K2UserDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['K2UserDatabaseConnectionString'] %></value>
+      </setting>
+      <setting name="EmailUnsubscribeRelativeUrl" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['EmailUnsubscribeRelativeUrl'] %></value>
+      </setting>
+      <setting name="EmailHeaderlRelativeUrl" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['EmailHeaderlRelativeUrl'] %></value>
+      </setting>
+      <setting name="BaseConfigurationManagerAddress" serializeAs="String">
+        <value></value>
+      </setting>
+      <setting name="ConfigurationScope" serializeAs="String">
+        <value><%= node['dgenotifmngr']['config']['ConfigurationScope'] %></value>
+      </setting>
+    </LLamasoft.DGE.ETL.Server.Properties.Settings>
+  </applicationSettings>
+</configuration>

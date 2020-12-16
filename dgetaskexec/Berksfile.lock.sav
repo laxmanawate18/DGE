@@ -1,0 +1,9 @@
+DEPENDENCIES
+  dgetaskexec
+    path: .
+    metadata: true
+
+GRAPH
+  artifactory_query (0.1.65)
+  dgetaskexec (0.1.11)
+    artifactory_query (>= 0.0.0)

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="LLamasoft.DGE.ETL.Server.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <applicationSettings>
+    <LLamasoft.DGE.ETL.Server.Properties.Settings>
+      <setting name="BaseServerAddress" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['BaseServerAddress'] %></value>
+      </setting>
+      <setting name="LogFilePath" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['LogFilePath'] %></value>
+      </setting>
+      <setting name="PersistedStateFilePath" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['PersistedStateFilePath'] %></value>
+      </setting>
+      <setting name="LogConnectionString" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['LogConnectionString'] %></value>
+      </setting>
+      <setting name="LogTableName" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['LogTableName'] %></value>
+      </setting>
+      <setting name="UseJobDatabase" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['UseJobDatabase'] %></value>
+      </setting>
+      <setting name="JobDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['JobDatabaseConnectionString'] %></value>
+      </setting>
+      <setting name="ModelMetaDataConnectionString" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['ModelMetaDataConnectionString'] %></value>
+      </setting>
+      <setting name="ModelMetaDataTableName" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['ModelMetaDataTableName'] %></value>
+      </setting>
+      <setting name="ModelDatabaseServerInstance" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['ModelDatabaseServerInstance'] %></value>
+      </setting>
+      <setting name="ModelDatabaseUserName" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['ModelDatabaseUserName'] %></value>
+      </setting>
+      <setting name="ModelDatabaseUserPassword" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['ModelDatabaseUserPassword'] %></value>
+      </setting>
+      <setting name="BaseConfigurationManagerAddress" serializeAs="String">
+        <value></value>
+      </setting>
+      <setting name="ConfigurationScope" serializeAs="String">
+        <value><%= node['dgeconnmgmt']['config']['ConfigurationScope'] %></value>
+      </setting>
+    </LLamasoft.DGE.ETL.Server.Properties.Settings>
+  </applicationSettings>
+</configuration>

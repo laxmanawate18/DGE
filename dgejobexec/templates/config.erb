@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="LLamasoft.DGE.ETL.Server.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <applicationSettings>
+    <LLamasoft.DGE.ETL.Server.Properties.Settings>
+      <setting name="BaseServerAddress" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['BaseServerAddress'] %></value>
+      </setting>
+      <setting name="BaseTaskCoordinatorAddress" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['BaseTaskCoordinatorAddress'] %></value>
+      </setting>
+      <setting name="LogFilePath" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['LogFilePath'] %></value>
+      </setting>
+      <setting name="PersistedStateFilePath" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['PersistedStateFilePath'] %></value>
+      </setting>
+      <setting name="LogConnectionString" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['LogConnectionString'] %></value>
+      </setting>
+      <setting name="LogTableName" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['LogTableName'] %></value>
+      </setting>
+      <setting name="RemoveFinishedJobDelayMinutes" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['RemoveFinishedJobDelayMinutes'] %></value>
+      </setting>
+      <setting name="MinimumReviewIntervalSeconds" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['MinimumReviewIntervalSeconds'] %></value>
+      </setting>
+      <setting name="CanMultitask" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['CanMultitask'] %></value>
+      </setting>
+      <setting name="BaseNotificationManagerAddress" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['BaseNotificationManagerAddress'] %></value>
+      </setting>
+      <setting name="RaiseAlertNotifications" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['RaiseAlertNotifications'] %></value>
+      </setting>
+      <setting name="BaseConfigurationManagerAddress" serializeAs="String">
+        <value></value>
+      </setting>
+      <setting name="ConfigurationScope" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['ConfigurationScope'] %></value>
+      </setting>
+      <setting name="PreventConnectionUsageCollisions" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['PreventConnectionUsageCollisions'] %></value>
+      </setting>
+      <setting name="JobDatabaseConnectionString" serializeAs="String">
+        <value><%= node['dgejobexec']['config']['JobDatabaseConnectionString'] %></value>
+      </setting>
+    </LLamasoft.DGE.ETL.Server.Properties.Settings>
+  </applicationSettings>
+</configuration>
